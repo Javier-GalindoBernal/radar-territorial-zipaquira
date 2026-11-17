@@ -1,12 +1,12 @@
 # Radar territorial · Zipaquirá
 
-Prototipo privado para registrar y explorar incidentes de seguridad reportados, con fuentes trazables y resultados agregados. **Corte del diseño: 16 de noviembre de 2026. Sin casos reales precargados.**
+Prototipo público para registrar y explorar incidentes de seguridad reportados, con fuentes trazables y resultados agregados. **Corte del diseño: 16 de noviembre de 2026. Sin casos reales precargados.**
 
 ## Abrir la aplicación
 
 [Radar territorial · Zipaquirá](https://radar-territorial-zipaquira.globalanalitiksas.chatgpt.site).
 
-El sitio tiene acceso privado mediante la cuenta autorizada de ChatGPT. El repositorio permite conservar y ejecutar el código; subir cambios a GitHub no actualiza automáticamente el sitio.
+El sitio tiene acceso público y se puede abrir sin iniciar sesión. Cada visitante conserva sus registros únicamente en su navegador; no existe una base compartida de incidentes. El repositorio permite conservar y ejecutar el código; subir cambios a GitHub no actualiza automáticamente el sitio.
 
 ## Ejecutar en tu equipo
 
