@@ -1,6 +1,6 @@
 # Radar territorial · Zipaquirá
 
-Prototipo público para registrar y explorar incidentes de seguridad reportados, con fuentes trazables y resultados agregados. **Corte del diseño: 16 de noviembre de 2026. Sin casos reales precargados.**
+Prototipo público para registrar y explorar incidentes de seguridad reportados, con fuentes trazables y resultados agregados. **Diseño actualizado: 17 de noviembre de 2026. Sin casos reales precargados.**
 
 **Realizado por GLOBAL ANALITIK SAS y QUANTIKA IA SAS — Javier Galindo.**
 
@@ -23,7 +23,7 @@ Abre `http://127.0.0.1:8000`. La cartografía está incluida en `dist/`; no requ
 Con Node.js, ejecuta las pruebas:
 
 ```sh
-node --test tests/data.test.mjs tests/territory.test.mjs
+node --test tests/*.test.mjs
 ```
 
 Los registros de trabajo se conservan en el navegador, no en GitHub. La plantilla vacía es el único CSV que se incluye por defecto; exportaciones y datos reales quedan excluidos mediante `.gitignore`.
@@ -34,7 +34,7 @@ Los registros de trabajo se conservan en el navegador, no en GitHub. La plantill
 2. Descarga `dist/plantilla-incidentes.csv` o registra los hechos manualmente.
 3. Conserva un identificador por publicación y otro por incidente. Varias publicaciones del mismo hecho comparten `incidente_id`.
 4. Revisa la fecha del hecho, el lugar y la procedencia. Mantén explícitos los datos desconocidos.
-5. Alterna **Comunas** y **Barrios**. Selecciona una zona por clic o buscador; acerca, aleja, desplaza y restablece la vista según necesites. El mapa se muestra sin incidentes: los colores iniciales distinguen territorios, no delitos.
+5. Alterna **Comunas** y **Barrios**. Selecciona una zona por clic o buscador; acerca, aleja, desplaza y restablece la vista según necesites. El modo Mapa de calor colorea polígonos por conteo; Territorios usa colores de referencia. El ranking sigue la capa activa.
 6. Explora los filtros y revisa los registros sin ubicación. Exporta una copia de respaldo al terminar.
 
 La plantilla CSV está vacía y contiene únicamente los encabezados. Usa las categorías exactas de la guía. Las coordenadas son opcionales y solo describen el lugar del hecho sustentado en la fuente. Si conoces un barrio o comuna del catálogo, usa **Solo zona**: el conteo se representa sobre el polígono sin inventar una coordenada del incidente.
@@ -76,3 +76,11 @@ El responsable de cada dato se documenta en `responsable_revision`, junto con su
 - [Estadística delictiva — Policía Nacional](https://www.policia.gov.co/tipos-descargables/estadistica-delictiva).
 - [Recopilación automatizada — Meta](https://about.fb.com/news/2021/04/how-we-combat-scraping/).
 
+
+## Rediseño y simulación — 17 nov 2026
+
+Interfaz naranja, letra base de 18 px y escudo aportado por el usuario. Lema: “Por la Zipaquirá que soñamos”. Es un piloto independiente y conserva el crédito de sus desarrolladores.
+
+Sin registros de trabajo, abre una simulación de 1.200 hechos únicos, con opciones de 600/1.200/2.400 y regeneración reproducible por semilla. Añade un 5 % de fuentes adicionales del mismo hecho para probar la deduplicación. Las ubicaciones nominales usan barrios reales del catálogo; todos los hechos y puntos son sintéticos. Los puntos se generan por muestreo interior, nunca por centroides. La simulación no escribe en localStorage ni permite exportación. No es evidencia de delitos reales.
+
+El mapa de calor es una representación por polígonos (coropleta): cantidad de incidentes únicos, con escala relativa a la capa y filtros actuales. No representa tasa por población ni densidad puntual. El ranking y el resumen usan el mismo modelo espacial. La vista inicial prioriza las comunas numeradas; Todo el territorio permite explorar la extensión municipal. La matriz pagina en lotes de 60 registros.
