@@ -2,6 +2,8 @@
 
 Prototipo público para registrar y explorar incidentes de seguridad reportados, con fuentes trazables y resultados agregados. **Corte del diseño: 16 de noviembre de 2026. Sin casos reales precargados.**
 
+**Realizado por GLOBAL ANALITIK SAS y QUANTIKA IA SAS — Javier Galindo.**
+
 ## Abrir la aplicación
 
 [Radar territorial · Zipaquirá](https://radar-territorial-zipaquira.globalanalitiksas.chatgpt.site).
