@@ -1,0 +1,491 @@
+{
+  "fecha_consulta": "2026-11-16",
+  "fecha_corte_proyecto": "2026-11-16",
+  "municipio": "Zipaquirá",
+  "codigo_dane": "25899",
+  "sistema_referencia_salida": "EPSG:4326, WGS84; GeoJSON en orden longitud,latitud",
+  "transformaciones": "Proyección a EPSG:4326 realizada por la API. Respuestas originales conservadas, sin simplificación, edición de atributos ni unión de polígonos.",
+  "comunas": {
+    "archivo": "comunas.geojson",
+    "url_capa": "https://services5.arcgis.com/l23kE3b7uPnZIuaB/ArcGIS/rest/services/Kernel_m82/FeatureServer/2",
+    "url_consulta": "https://services5.arcgis.com/l23kE3b7uPnZIuaB/ArcGIS/rest/services/Kernel_m82/FeatureServer/2/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+    "url_catalogo": "https://www.arcgis.com/home/item.html?id=735d4547831f4431b7b91cf5c4aa068c",
+    "tipo_fuente": "Republicación académica de cartografía con fuente municipal declarada",
+    "publicador": "Universidad de Manizales, organización ArcGIS l23kE3b7uPnZIuaB, usuario mcardenas118606_umanizales",
+    "url_organizacion": "https://www.arcgis.com/sharing/rest/portals/l23kE3b7uPnZIuaB?f=pjson",
+    "fuente_declarada": "Grupo de Sistemas de Información Geográfica de la Dirección Técnica de Planeación del Desarrollo.\nSecretaría de Planeación - Alcaldía Municipal de Zipaquirá. \nVersión 1.0 - Última actualización 2014.",
+    "descripcion_declarada": "Representación cartográfica de la división territorial urbana del municipio de Zipaquirá en comunas de conformidad con el Acuerdo Municipal No. 08 de 2014  expedido por el Concejo Municipal. ",
+    "edicion_declarada": "Versión 1.0, última actualización 2014; descripción cita Acuerdo Municipal 08 de 2014",
+    "cotejo_original_municipal": false,
+    "vigencia_juridica_actual_verificada": false,
+    "licencia": {
+      "estado": "No declarada en licenseInfo del elemento consultado",
+      "texto_publicador": "",
+      "nota": "No se presupone una licencia CC BY por analogía con otra publicación."
+    },
+    "sistema_referencia_origen": {
+      "wkid": 9377,
+      "latestWkid": 9377
+    },
+    "campos_metadatos": [
+      {
+        "name": "FID",
+        "type": "esriFieldTypeOID",
+        "alias": "FID",
+        "sqlType": "sqlTypeOther",
+        "nullable": false,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "NOMBRE",
+        "type": "esriFieldTypeString",
+        "alias": "NOMBRE",
+        "sqlType": "sqlTypeOther",
+        "length": 50,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "BARRIOS",
+        "type": "esriFieldTypeString",
+        "alias": "BARRIOS",
+        "sqlType": "sqlTypeOther",
+        "length": 50,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape_Leng",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape_Leng",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "NUM",
+        "type": "esriFieldTypeString",
+        "alias": "NUM",
+        "sqlType": "sqlTypeOther",
+        "length": 20,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "NOMBRE_1",
+        "type": "esriFieldTypeString",
+        "alias": "NOMBRE_1",
+        "sqlType": "sqlTypeOther",
+        "length": 254,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "COUNT_",
+        "type": "esriFieldTypeDouble",
+        "alias": "COUNT",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "AREA",
+        "type": "esriFieldTypeDouble",
+        "alias": "AREA",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "MIN_",
+        "type": "esriFieldTypeDouble",
+        "alias": "MIN",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "MAX_",
+        "type": "esriFieldTypeDouble",
+        "alias": "MAX",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "RANGE_",
+        "type": "esriFieldTypeDouble",
+        "alias": "RANGE_",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "MEAN",
+        "type": "esriFieldTypeDouble",
+        "alias": "MEAN",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "STD",
+        "type": "esriFieldTypeDouble",
+        "alias": "STD",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "SUM_",
+        "type": "esriFieldTypeDouble",
+        "alias": "SUM",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "MEDIAN",
+        "type": "esriFieldTypeDouble",
+        "alias": "MEDIAN",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "PCT90",
+        "type": "esriFieldTypeDouble",
+        "alias": "PCT90",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "OBJECTID_1",
+        "type": "esriFieldTypeInteger",
+        "alias": "OBJECTID_1",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Area",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Length",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "validacion": {
+      "features": 5,
+      "campo_id": "FID",
+      "ids_unicos": true,
+      "campo_nombre": "NOMBRE",
+      "nombres_unicos": 5,
+      "vertices": 2672,
+      "anillos_cerrados": 5,
+      "bbox_lon_lat": [
+        -74.0120791309135,
+        5.00220580448069,
+        -73.9667723227225,
+        5.04167358889945
+      ],
+      "sha256": "0b6c5c549eddd2d68ac706b8bb76617fafab035d1b20892f3cd29030e68afc6e",
+      "bytes": 100883,
+      "validacion_geometria": "Polígonos/multipolígonos no vacíos, anillos cerrados y coordenadas WGS84 finitas con bounds locales; no se ejecutó validación topológica adicional."
+    },
+    "campo_nombre": "NOMBRE",
+    "campo_numero_comuna": "NUM",
+    "numeros": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "nota_campos_tematicos": "COUNT_, MIN_, MAX_, RANGE_, MEAN, STD, SUM_, MEDIAN y PCT90 son atributos temáticos del servicio Kernel_m82; no representan incidentes de seguridad y no se usan para contarlos."
+  },
+  "barrios": {
+    "archivo": "barrios.geojson",
+    "url_capa": "https://services5.arcgis.com/l23kE3b7uPnZIuaB/ArcGIS/rest/services/Kernel_m82/FeatureServer/3",
+    "url_consulta": "https://services5.arcgis.com/l23kE3b7uPnZIuaB/ArcGIS/rest/services/Kernel_m82/FeatureServer/3/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+    "url_catalogo": "https://www.arcgis.com/home/item.html?id=735d4547831f4431b7b91cf5c4aa068c",
+    "tipo_fuente": "Republicación académica de cartografía con fuente municipal declarada",
+    "publicador": "Universidad de Manizales, organización ArcGIS l23kE3b7uPnZIuaB, usuario mcardenas118606_umanizales",
+    "url_organizacion": "https://www.arcgis.com/sharing/rest/portals/l23kE3b7uPnZIuaB?f=pjson",
+    "fuente_declarada": "Grupo de Sistemas de Información Geográfica de la Dirección Técnica de Planeación del Desarrollo.\nSecretaría de Planeación - Alcaldía Municipal de Zipaquirá. \nVersión 3.0 - Última actualización Abril 2026.",
+    "descripcion_declarada": "Comprende la división barrial del municipio de Zipaquirá (incluye urbanizaciones tanto en suelo urbano como rural, así como algunos sectores en suelo rural que son de conocimiento popular pero que no se encuentran legalizados)",
+    "edicion_declarada": "Versión 3.0, última actualización abril 2026, según metadato; no cotejada con original",
+    "cotejo_original_municipal": false,
+    "vigencia_juridica_actual_verificada": false,
+    "licencia": {
+      "estado": "No declarada en licenseInfo del elemento consultado",
+      "texto_publicador": "",
+      "nota": "No se presupone una licencia CC BY por analogía con otra publicación."
+    },
+    "sistema_referencia_origen": {
+      "wkid": 9377,
+      "latestWkid": 9377
+    },
+    "campos_metadatos": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "sqlType": "sqlTypeOther",
+        "nullable": false,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "COMUNA",
+        "type": "esriFieldTypeInteger",
+        "alias": "COMUNA",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CORREGIMIE",
+        "type": "esriFieldTypeInteger",
+        "alias": "CORREGIMIE",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "COD_DEPTO",
+        "type": "esriFieldTypeInteger",
+        "alias": "COD_DEPTO",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "COD_MUNICI",
+        "type": "esriFieldTypeInteger",
+        "alias": "COD_MUNICI",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "NOMBRE",
+        "type": "esriFieldTypeString",
+        "alias": "NOMBRE",
+        "sqlType": "sqlTypeOther",
+        "length": 200,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "AREA",
+        "type": "esriFieldTypeDouble",
+        "alias": "AREA",
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "OBSERV",
+        "type": "esriFieldTypeString",
+        "alias": "OBSERV",
+        "sqlType": "sqlTypeOther",
+        "length": 50,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "SUELO",
+        "type": "esriFieldTypeString",
+        "alias": "SUELO",
+        "sqlType": "sqlTypeOther",
+        "length": 50,
+        "nullable": true,
+        "editable": true,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Area",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Area",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Shape__Length",
+        "type": "esriFieldTypeDouble",
+        "alias": "Shape__Length",
+        "sqlType": "sqlTypeDouble",
+        "nullable": true,
+        "editable": false,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "validacion": {
+      "features": 191,
+      "campo_id": "OBJECTID",
+      "ids_unicos": true,
+      "campo_nombre": "NOMBRE",
+      "nombres_unicos": 190,
+      "vertices": 14339,
+      "anillos_cerrados": 196,
+      "bbox_lon_lat": [
+        -74.0256946889728,
+        5.00645980006245,
+        -73.9534374335236,
+        5.04292827832416
+      ],
+      "sha256": "e171d86692112b68ad8378b1c89ad0bf089e3b9ec49b3ac81864c896e6c9ce0c",
+      "bytes": 586944,
+      "validacion_geometria": "Polígonos/multipolígonos no vacíos, anillos cerrados y coordenadas WGS84 finitas con bounds locales; no se ejecutó validación topológica adicional."
+    },
+    "campo_nombre": "NOMBRE",
+    "campo_numero_comuna": "COMUNA",
+    "campo_corregimiento": "CORREGIMIE",
+    "campo_suelo": "SUELO",
+    "distribucion_comuna": {
+      "0": 25,
+      "1": 9,
+      "2": 39,
+      "3": 71,
+      "4": 42,
+      "5": 5
+    },
+    "distribucion_suelo": {
+      "URBANO": 99,
+      "EXPANSIÓN URBANA": 70,
+      "RURAL": 19,
+      "RURAL - SUBURBANO": 2,
+      "RURAL - PROTECCIÓN": 1
+    },
+    "anomalias_preservadas": [
+      {
+        "OBJECTID": 206,
+        "NOMBRE": "RESERVA DE PASOANCHO",
+        "campo": "COD_DEPTO",
+        "valor_original": 255,
+        "observacion": "Difiere de 25; conservado sin corregir."
+      }
+    ],
+    "limite_semantico": "191 polígonos de barrios, urbanizaciones y sectores; incluye suelo urbano, expansión, rural y algunos sectores de conocimiento popular no legalizados según descripción. No equivale a 191 barrios legalizados.",
+    "nombres_duplicados": {
+      "ALTOS DE VILLA MARIA": [
+        89,
+        112
+      ]
+    },
+    "nota_identificador": "Usar OBJECTID como clave; NOMBRE no es único. La repetición de nombre no prueba duplicación geométrica."
+  },
+  "compatibilidad": {
+    "atributos": "Cinco comunas NUM 1..5; los barrios usan COMUNA 1..5 y 0. Las claves numeradas son compatibles a nivel de atributo.",
+    "comuna_cero": "COMUNA=0 no es una sexta comuna; conservar sin asignación a comuna numerada. Hay 25 polígonos con este valor.",
+    "geometria": "No se certifica equivalencia espacial de todas las extensiones: comunas declaran 2014 y barrios abril 2026.",
+    "vigencia": "No se verifica vigencia jurídica ni publicación original municipal; usar como cartografía referencial con publicador y edición visibles."
+  },
+  "comunas_historicas_oficiales": {
+    "archivo": "comunas-cundinamarca-2013.geojson",
+    "titulo": "Comunas. Municipio de Zipaquirá. 2013. (Capa)",
+    "tipo_fuente": "Publicación oficial departamental histórica, separada de las capas activas",
+    "publicador": "Gobernación de Cundinamarca, organización ArcGIS lsxbLWF2l19Rmhqj, usuario ideradmin",
+    "url_capa": "https://services7.arcgis.com/lsxbLWF2l19Rmhqj/arcgis/rest/services/ComunasZipaquira/FeatureServer/0",
+    "url_catalogo": "https://www.arcgis.com/home/item.html?id=fd8daa5d1e3942f4bcff996077cee6f7",
+    "edicion_declarada": "2013",
+    "licencia": {
+      "identificador": "CC BY 4.0",
+      "texto_publicador": "<div>Se dispone esta información con las siguientes condiciones para los usuarios:</div><div><ul><li>Deben reconocer la autoría de la obra con las mismas especificaciones establecidas por el autor. </li><li>Pueden copiar, distribuir, mostrar y ejecutar el trabajo licenciado. </li><li>Pueden realizar obras derivadas, es decir, manipular, modificar y realizar adaptaciones cuando usen la obra origina, siempre reconociendo la autoría de la original.</li><li>Pueden comercializar la obra original y las nuevas obras (obras derivadas); es potestativo comercializar o no el pro ducto derivado.</li><li>Las nuevas obras (obras derivadas) pueden tener un licenciamiento diverso al expresado por el autor/titular de la licencia de la obra original (CC BY 4.0)</li></ul></div><div><br /></div>"
+    },
+    "validacion": {
+      "features": 4,
+      "campo_id": "OBJECTID_1",
+      "ids_unicos": true,
+      "campo_nombre": "NOMBRE",
+      "nombres_unicos": 4,
+      "vertices": 762,
+      "anillos_cerrados": 4,
+      "bbox_lon_lat": [
+        -74.0121798786622,
+        5.0002978775095,
+        -73.9788965181857,
+        5.04070497592561
+      ],
+      "sha256": "8ea1852a9472ec8fc8262e542fb93d187aa7262374184fb1cc852cd955a77a9b",
+      "bytes": 29329,
+      "validacion_geometria": "Polígonos/multipolígonos no vacíos, anillos cerrados y coordenadas WGS84 finitas con bounds locales; no se ejecutó validación topológica adicional."
+    },
+    "nota": "Contiene 4 comunas; no se utiliza como división actual ni se mezcla con las 5 comunas de la referencia 2014."
+  },
+  "fuente_oficial_barrios_no_disponible": {
+    "url_catalogo": "https://www.arcgis.com/home/item.html?id=2dbcaa712d344f54b3743167b7ae256d",
+    "url_capa": "https://maps.cundinamarca.gov.co/agsprod/rest/services/IDER/IDER_Zipaquira/MapServer/21",
+    "estado": "No se pudo resolver el host desde este entorno; no se utilizó como geometría descargada."
+  },
+  "datos_personales": "Solo polígonos y atributos geográficos; no se recopilaron incidentes ni perfiles de personas."
+}

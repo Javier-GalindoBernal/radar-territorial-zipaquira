@@ -1,0 +1,57 @@
+{
+  "archivo": "limite-igac.geojson",
+  "titulo": "Límite municipal. Municipio de Zipaquirá. (Capa)",
+  "municipio": {
+    "nombre": "Zipaquirá",
+    "codigo_dane": "25899"
+  },
+  "entidad_productora": "Instituto Geográfico Agustín Codazzi (IGAC), SIGOT; atribución declarada por el publicador",
+  "publicador": "Gobernación de Cundinamarca, organización ArcGIS lsxbLWF2l19Rmhqj, usuario ideradmin",
+  "fuente": "Cartografía de referencia publicada por Cundinamarca con atribución IGAC; no descargada directamente del servidor IGAC.",
+  "url_capa": "https://services7.arcgis.com/lsxbLWF2l19Rmhqj/ArcGIS/rest/services/Limite_Zipaquira/FeatureServer/0",
+  "url_catalogo": "https://www.arcgis.com/home/item.html?id=ca4d20f14ecb479bacf76c334bd6f597",
+  "url_metadatos": "https://www.arcgis.com/sharing/rest/content/items/ca4d20f14ecb479bacf76c334bd6f597?f=pjson",
+  "url_consulta": "https://services7.arcgis.com/lsxbLWF2l19Rmhqj/ArcGIS/rest/services/Limite_Zipaquira/FeatureServer/0/query?where=CODIGO%3D%2725899%27&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+  "fecha_consulta": "2026-11-16",
+  "fecha_corte_proyecto": "2026-11-16",
+  "vigencia_geografia_declarada": "2018-10",
+  "fecha_modificacion_catalogo_utc": "2025-05-01T17:05:41+00:00",
+  "licencia": {
+    "identificador": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.es",
+    "atribucion": "IGAC/SIGOT; publicado por Gobernación de Cundinamarca",
+    "texto_publicador": "<div>Se dispone esta información con las siguientes condiciones para los usuarios:</div><div><ul><li>Deben reconocer la autoría de la obra con las mismas especificaciones establecidas por el autor. </li><li>Pueden copiar, distribuir, mostrar y ejecutar el trabajo licenciado. </li><li>Pueden realizar obras derivadas, es decir, manipular, modificar y realizar adaptaciones cuando usen la obra origina, siempre reconociendo la autoría de la original.</li><li>Pueden comercializar la obra original y las nuevas obras (obras derivadas); es potestativo comercializar o no el pro ducto derivado.</li><li>Las nuevas obras (obras derivadas) pueden tener un licenciamiento diverso al expresado por el autor/titular de la licencia de la obra original(CC BY 4.0)</li></ul></div><div><br /></div>"
+  },
+  "consulta": {
+    "where": "CODIGO='25899'",
+    "outFields": "*",
+    "returnGeometry": true,
+    "outSR": 4326,
+    "f": "geojson"
+  },
+  "sistema_referencia_salida": "WGS84, EPSG:4326; GeoJSON en orden longitud, latitud",
+  "sistema_referencia_origen": "MAGNA-SIRGAS / Colombia Bogota zone, EPSG:3116, declarado por la capa",
+  "validacion": {
+    "features": 1,
+    "codigo": "25899",
+    "nombre": "ZIPAQUIRÁ",
+    "tipo_geometria": "Polygon",
+    "vertices": 12843,
+    "bbox_lon_lat": [
+      -74.0953309175514,
+      4.96316692956414,
+      -73.9124201897997,
+      5.15869418498828
+    ],
+    "geometria": "Anillos cerrados y coordenadas finitas; no se ejecutó validación topológica adicional.",
+    "sha256": "02b832dbc8acd7d7b70f9b4b106405d2bedb886a2ecca8eee8462d1c6951f1b2",
+    "bytes": 472733
+  },
+  "transformaciones": "La API transformó de EPSG:3116 a EPSG:4326. Archivo de respuesta conservado sin simplificación, unión de capas ni edición de coordenadas.",
+  "limitaciones": [
+    "Geografía referencial de versión octubre de 2018; no acredita límites jurídicos vigentes ni localización de incidentes.",
+    "El corte del proyecto y la fecha de consulta no son la vigencia de la geografía.",
+    "Las capas IGAC Limites/FeatureServer/0 y Municipios_ColSmart/MapServer/5 no devolvieron Zipaquirá; se utilizó la publicación específica de Cundinamarca."
+  ],
+  "datos_personales": "No contiene registros de personas ni de incidentes."
+}
