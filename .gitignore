@@ -1,0 +1,21 @@
+# Configuración y secretos locales
+.env
+.env.*
+!.env.example
+.DS_Store
+node_modules/
+.sites-*/
+*.log
+
+# Datos de trabajo: el repositorio contiene código y cartografía, no incidentes reales
+datos/
+uploads/
+backups/
+*.csv
+!dist/plantilla-incidentes.csv
+
+# Capturas y paquetes generados
+*.jpg
+*.png
+*.tar.gz
+*.zip

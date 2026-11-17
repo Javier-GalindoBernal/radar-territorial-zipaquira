@@ -2,6 +2,30 @@
 
 Prototipo privado para registrar y explorar incidentes de seguridad reportados, con fuentes trazables y resultados agregados. **Corte del diseño: 16 de noviembre de 2026. Sin casos reales precargados.**
 
+## Abrir la aplicación
+
+[Radar territorial · Zipaquirá](https://radar-territorial-zipaquira.globalanalitiksas.chatgpt.site).
+
+El sitio tiene acceso privado mediante la cuenta autorizada de ChatGPT. El repositorio permite conservar y ejecutar el código; subir cambios a GitHub no actualiza automáticamente el sitio.
+
+## Ejecutar en tu equipo
+
+Desde la carpeta del repositorio, con Python 3 instalado:
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
+```
+
+Abre `http://127.0.0.1:8000`. La cartografía está incluida en `dist/`; no requiere instalar paquetes ni configurar claves. Usa un servidor local: abrir directamente `dist/index.html` como archivo puede impedir que el navegador cargue los módulos y las geometrías.
+
+Con Node.js, ejecuta las pruebas:
+
+```sh
+node --test tests/data.test.mjs tests/territory.test.mjs
+```
+
+Los registros de trabajo se conservan en el navegador, no en GitHub. La plantilla vacía es el único CSV que se incluye por defecto; exportaciones y datos reales quedan excluidos mediante `.gitignore`.
+
 ## Uso
 
 1. Abre el tablero y consulta **Guía del piloto**.
@@ -40,7 +64,8 @@ La plantilla CSV está vacía y contiene únicamente los encabezados. Usa las ca
 | `dist/plantilla-incidentes.csv` | Encabezados para preparar registros. |
 | `dist/comunas.geojson`, `dist/barrios.geojson` | Geometría de referencia de las capas activas. |
 | `dist/fuentes-zonas.json` | Procedencia y límites de la cartografía. |
-| `../../Process/metodo-piloto.md` | Método del piloto y pendientes de validación. |
+| `docs/metodo-piloto.md` | Método del piloto y pendientes de validación. |
+| `docs/fuentes/comunas-cundinamarca-2013.geojson` | Copia histórica de cuatro comunas, conservada para trazabilidad; no se usa en el mapa activo. |
 
 El responsable de cada dato se documenta en `responsable_revision`, junto con su fuente y fecha de consulta. El responsable institucional del piloto real está pendiente de designación.
 

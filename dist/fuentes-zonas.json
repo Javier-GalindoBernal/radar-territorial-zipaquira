@@ -451,7 +451,7 @@
     "vigencia": "No se verifica vigencia jurídica ni publicación original municipal; usar como cartografía referencial con publicador y edición visibles."
   },
   "comunas_historicas_oficiales": {
-    "archivo": "comunas-cundinamarca-2013.geojson",
+    "archivo": "../docs/fuentes/comunas-cundinamarca-2013.geojson",
     "titulo": "Comunas. Municipio de Zipaquirá. 2013. (Capa)",
     "tipo_fuente": "Publicación oficial departamental histórica, separada de las capas activas",
     "publicador": "Gobernación de Cundinamarca, organización ArcGIS lsxbLWF2l19Rmhqj, usuario ideradmin",
@@ -480,7 +480,8 @@
       "bytes": 29329,
       "validacion_geometria": "Polígonos/multipolígonos no vacíos, anillos cerrados y coordenadas WGS84 finitas con bounds locales; no se ejecutó validación topológica adicional."
     },
-    "nota": "Contiene 4 comunas; no se utiliza como división actual ni se mezcla con las 5 comunas de la referencia 2014."
+    "nota": "Contiene 4 comunas; no se utiliza como división actual ni se mezcla con las 5 comunas de la referencia 2014.",
+    "archivo_original": "comunas-cundinamarca-2013.geojson"
   },
   "fuente_oficial_barrios_no_disponible": {
     "url_catalogo": "https://www.arcgis.com/home/item.html?id=2dbcaa712d344f54b3743167b7ae256d",

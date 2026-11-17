@@ -1,5 +1,5 @@
 {
-  "archivo": "limite-igac.geojson",
+  "archivo": "limite-zipaquira.geojson",
   "titulo": "Límite municipal. Municipio de Zipaquirá. (Capa)",
   "municipio": {
     "nombre": "Zipaquirá",
@@ -53,5 +53,6 @@
     "El corte del proyecto y la fecha de consulta no son la vigencia de la geografía.",
     "Las capas IGAC Limites/FeatureServer/0 y Municipios_ColSmart/MapServer/5 no devolvieron Zipaquirá; se utilizó la publicación específica de Cundinamarca."
   ],
-  "datos_personales": "No contiene registros de personas ni de incidentes."
+  "datos_personales": "No contiene registros de personas ni de incidentes.",
+  "archivo_original": "limite-igac.geojson"
 }
