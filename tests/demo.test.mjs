@@ -72,3 +72,22 @@ test('límites de escenario, cartografía ausente y fecha inválida se manejan e
   assert.throws(() => generateDemoRecords({ ...config, count: 2401 }), /2400/);
   assert.throws(() => generateDemoRecords({ ...config, today: '2026-02-30' }), /fecha de corte/);
 });
+
+const veredas = prepare(read('veredas.geojson'), 'veredas');
+const san = read('san-miguel.geojson');
+const expandedBarrios = prepare({type:'FeatureCollection',features:[...read('barrios.geojson').features,...san.features.map(f=>({...f,properties:{...f.properties,NOMBRE:'SAN MIGUEL',TIPO_ZONA:'Centro poblado',AMBITO:'Rural',SUELO:'RURAL'}}))]},'barrios');
+test('la simulación incluye veredas, ámbito rural y San Miguel sin duplicar hechos',()=>{
+  const rows=generateDemoRecords({...config,barrios:expandedBarrios,veredas,municipal});
+  const checked=validateRecords(rows,{demo:true,today:config.today});
+  assert.deepEqual(checked.errors,[]);
+  const groups=groupIncidents(checked.records);
+  assert.equal(groups.length,1200);
+  assert.ok(rows.some(r=>r.tipo_zona==='Vereda'));
+  const sanZone=expandedBarrios.find(z=>z.label==='SAN MIGUEL');
+  assert.ok(rows.filter(r=>r.tipo_zona==='Centro poblado'&&r.zona===sanZone.displayLabel).length>40);
+  const mapped=model(groups,{barrios:expandedBarrios,comunas,veredas},'barrios',municipal);
+  assert.ok(mapped.counts.get(sanZone.id).length>40);
+  const rural=model(groups,{barrios:expandedBarrios,comunas,veredas},'veredas',municipal);
+  assert.ok(rural.mappedIds.size>150);
+  assert.equal([...rural.counts.values()].reduce((s,g)=>s+g.length,0),rural.mappedIds.size);
+});

@@ -7,7 +7,7 @@ export const COLUMNS = Object.freeze([
 
 export const ENUMS = Object.freeze({
   delito: ['Hurto a personas', 'Hurto a vehículos', 'Hurto a comercio', 'Lesiones personales', 'Otro incidente'],
-  tipo_zona: ['Barrio', 'Comuna', 'Vereda', 'Sector', 'Sin ubicar'],
+  tipo_zona: ['Barrio', 'Comuna', 'Vereda', 'Centro poblado', 'Sector', 'Sin ubicar'],
   precision_ubicacion: ['Punto verificado', 'Aproximada', 'Solo zona', 'Sin ubicar'],
   fuente: ['Facebook', 'Oficial', 'Medio local', 'Reporte voluntario'],
   verificacion: ['Pendiente', 'Contrastado', 'Registro oficial'],

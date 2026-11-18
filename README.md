@@ -84,3 +84,19 @@ Interfaz naranja, letra base de 18 px y escudo aportado por el usuario. Lema: �
 Sin registros de trabajo, abre una simulación de 1.200 hechos únicos, con opciones de 600/1.200/2.400 y regeneración reproducible por semilla. Añade un 5 % de fuentes adicionales del mismo hecho para probar la deduplicación. Las ubicaciones nominales usan barrios reales del catálogo; todos los hechos y puntos son sintéticos. Los puntos se generan por muestreo interior, nunca por centroides. La simulación no escribe en localStorage ni permite exportación. No es evidencia de delitos reales.
 
 El mapa de calor es una representación por polígonos (coropleta): cantidad de incidentes únicos, con escala relativa a la capa y filtros actuales. No representa tasa por población ni densidad puntual. El ranking y el resumen usan el mismo modelo espacial. La vista inicial prioriza las comunas numeradas; Todo el territorio permite explorar la extensión municipal. La matriz pagina en lotes de 60 registros.
+
+## Veredas y San Miguel — 18 nov 2026
+
+El inicio muestra 14 veredas cartográficas de referencia y la extensión municipal. Se mantienen las capas Comunas y Barrios y centros; el acceso Ubicar San Miguel enfoca su polígono. San Miguel no figuraba en los 191 polígonos originales: se incorpora como complemento separado de IDER Cundinamarca, clasificado expresamente como centro poblado rural. No se inventa comuna ni vereda padre.
+
+La fuente de veredas es una republicación académica con origen municipal declarado y edición julio de 2013. La capa de San Miguel tiene edición de datos de 2022 y licencia CC BY 4.0 declarada. Un catálogo modificado en 2026 no acredita datos temáticos de 2026. Fuentes y limitaciones: dist/fuentes-rural.json. No se mezclaron dos catálogos veredales discrepantes.
+
+El filtro Ámbito territorial y tres conteos derivados separan Urbano (incluye expansión), Rural y Sin determinar. La clasificación es referencial según fuente/ubicación, no una certificación jurídica. No se usa COMUNA=0 para deducir ruralidad. Los hechos urbanos se excluyen de la agregación rural. Las capas no deben sumarse entre sí, pues pueden describir los mismos incidentes.
+
+La simulación incorpora hechos sintéticos de veredas y centros poblados, incluido San Miguel, conservando el total de hechos solicitado y el 5 % adicional de fuentes para probar deduplicación.
+
+### Comparación con archivos aportados
+
+El archivo del usuario llamado zipaquira_barrios_comunas_veredas contiene 191 polígonos, todos etiquetados como barrios: coincide exactamente con la capa barrial existente al quitar el atributo auxiliar _capa. No aporta polígonos de comunas, veredas ni San Miguel.
+
+El texto de OpenStreetMap contiene un único límite municipal. Se conservó una copia reparada únicamente con la llave inicial faltante en Inputs del proyecto; no se usa como sustituto de las divisiones internas ni se reemplaza el límite IGAC existente sin cotejo. La aplicación combina capas diferenciadas y documenta la procedencia rural en fuentes-rural.json.

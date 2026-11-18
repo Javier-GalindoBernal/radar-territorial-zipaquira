@@ -1,0 +1,263 @@
+{
+  "fecha_consulta": "2026-11-17",
+  "veredas": {
+    "fecha_consulta": "2026-11-17",
+    "archivo_recomendado": "veredas-municipal-republicada.geojson",
+    "titulo_capa": "Límite Veredal",
+    "tipo_fuente": "Republicación académica con fuente municipal declarada; no cotejada con cartografía original municipal vigente",
+    "publicador": "Universidad de Manizales, organización ArcGIS l23kE3b7uPnZIuaB, usuario mcardenas118606_umanizales",
+    "fuente_declarada": "Grupo SIG CIDETER S.A.S. como parte de la consultoría para la elaboración de la cartografía de formulación del Acuerdo Municipal No. 12 de 2013 “Por el cual se modifica excepcionalmente el Plan de Ordenamiento Territorial del Municipio de Zipaquirá”\nSecretaría de Planeación - Alcaldía Municipal de Zipaquirá. \nJulio de 2013.",
+    "descripcion_declarada": "Representación cartográfica de la división veredal del suelo rural del municipio según lo estipulado en el Acuerdo Municipal No. 12 de 2013 “Por el cual se modifica excepcionalmente el Plan de Ordenamiento Territorial del Municipio de Zipaquirá”",
+    "edicion_declarada": "Julio de 2013; descripción cita Acuerdo Municipal No.12 de 2013",
+    "vigencia_juridica_actual_verificada": false,
+    "url_capa": "https://services5.arcgis.com/l23kE3b7uPnZIuaB/ArcGIS/rest/services/Kernel_m82/FeatureServer/4",
+    "url_consulta": "https://services5.arcgis.com/l23kE3b7uPnZIuaB/ArcGIS/rest/services/Kernel_m82/FeatureServer/4/query?where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&f=geojson",
+    "url_catalogo": "https://www.arcgis.com/home/item.html?id=735d4547831f4431b7b91cf5c4aa068c",
+    "licencia": {
+      "estado": "No declarada en el elemento de esta geometría",
+      "texto_publicador": "",
+      "nota": "No trasladar la CC BY4.0 del item IDER a esta capa distinta."
+    },
+    "sistema_referencia_origen": {
+      "wkid": 9377,
+      "latestWkid": 9377
+    },
+    "sistema_referencia_salida": "EPSG:4326, coordenadas longitud/latitud",
+    "transformaciones": "Reproyección realizada por la API; respuesta original conservada sin simplificar ni modificar atributos o geometría.",
+    "campo_id": "OBJECTID_12",
+    "campo_nombre": "nombre",
+    "campo_codigo": "codigo",
+    "sin_comuna_numerada": "La capa no contiene campo COMUNA; no asignar comunas por nombre ni por centroides.",
+    "validacion": {
+      "features": 14,
+      "ids_unicos": true,
+      "nombres_unicos": true,
+      "nombres": [
+        "VEREDA SAN ISIDRO",
+        "VEREDA BARRO BLANCO",
+        "VEREDA SAN JORGE",
+        "VEREDA PASO ANCHO",
+        "VEREDA EL CEDRO",
+        "VEREDA PORTACHUELO",
+        "VEREDA BARANDILLAS",
+        "VEREDA VENTALARGA",
+        "VEREDA CENTRO",
+        "VEREDA EL EMPALIZADO",
+        "VEREDA PÁRAMO DE GUERRERO",
+        "VEREDA EL TUNAL",
+        "VEREDA RIO FRÍO",
+        "VEREDA LA GRANJA"
+      ],
+      "bbox_lon_lat": [
+        -74.0943598730131,
+        4.96283931436199,
+        -73.9079821748242,
+        5.15869418371614
+      ],
+      "anillos": 15,
+      "vertices": 54922,
+      "errores_estructurales": [],
+      "sha256": "b09eb5b30ecf4c491eaa613aa16d52d9776814bc94273f04b95c807902473a29",
+      "bytes": 2024988,
+      "topologia": "No se ejecutó validación topológica GIS adicional."
+    },
+    "cotejos": {
+      "ider": {
+        "item": "9f42874732764351af39456ad458d001",
+        "metadata_fecha": "2022-02-21",
+        "item_modificado_utc": "2025-05-01T23:26:49+00:00",
+        "url_capa_original": "https://maps.cundinamarca.gov.co/agsprod/rest/services/IDER/IDER_Zipaquira/MapServer/12",
+        "resultado": "Host no resolvió desde este entorno aun con acceso a red. No se obtuvo geometría de este servicio.",
+        "descripcion": "Declara14 veredas, entre ellasPantanoRedondo; no incluyeVentalarga en el resumen. No acredita igualdad con la capa recomendada."
+      },
+      "departamental": {
+        "archivo": "veredas-departamental-25899.geojson",
+        "url_capa": "https://services7.arcgis.com/lsxbLWF2l19Rmhqj/ArcGIS/rest/services/Veredas/FeatureServer/0",
+        "filtro": "cod_mun='25899'",
+        "resultado": "15 polígonos: incluye CASCO URBANO y SAN ANTONIO; no incluyeEL CEDRO. Sin equivalencia acreditada entre catálogos. No se mezclaron geometrías."
+      }
+    },
+    "archivos_fuente": [
+      {
+        "archivo": "catalogo-departamental.json",
+        "bytes": 912244,
+        "sha256": "454df0619521a5e2d0812d001c5bfb29dda4f21cf0d426ffebf6c3de0ddc737d"
+      },
+      {
+        "archivo": "item-kernel-m82.json",
+        "bytes": 1856,
+        "sha256": "b7bee0641c6b2abfc245404c747de8eba1a113b5ee8c85a98eb61bf477609ce0"
+      },
+      {
+        "archivo": "item-veredas-departamental.json",
+        "bytes": 1667,
+        "sha256": "080ecd1ae1b58d568bb53e6f32b8430581a602241340189d3de61905ea8c214e"
+      },
+      {
+        "archivo": "item-veredas-ider.json",
+        "bytes": 3792,
+        "sha256": "517dc12edf474a4cce30f920e0a6a2e9aad75a5685ba1abc82f36676eae7fe76"
+      },
+      {
+        "archivo": "kernel-m82-servicio.json",
+        "bytes": 6648,
+        "sha256": "f7d624e2063c1785ea2f0f0bd5bf93b3736276488ddca1ed139cc19cf1fee816"
+      },
+      {
+        "archivo": "metadata-veredas-ider.xml",
+        "bytes": 7196,
+        "sha256": "fc7d74b436cd512d5493b716e25583ba528a165dde3aba3e3227cf11ccc5f0d2"
+      },
+      {
+        "archivo": "validacion-veredas.json",
+        "bytes": 798,
+        "sha256": "d2adc1e4f790c10b1eb721b48222c28047a45417047dc257e414dfe8d1316f5b"
+      },
+      {
+        "archivo": "veredas-departamental-25899.geojson",
+        "bytes": 275482,
+        "sha256": "45d36c24d7100852caf8f2bcd7f2127064b80e9bc3b8d1617a7e228a4087bfb5"
+      },
+      {
+        "archivo": "veredas-departamental-capa.json",
+        "bytes": 14042,
+        "sha256": "115e4260e6aa7ef6ecf47b8e7c3e4126c461f55c7496627e6cddd3172dff2b5f"
+      },
+      {
+        "archivo": "veredas-municipal-republicada-capa.json",
+        "bytes": 14738,
+        "sha256": "01b0bca150842ea17fc84b92275cc0b5f1e33ba0a70e6266f14b4aa5ff2d347b"
+      },
+      {
+        "archivo": "veredas-municipal-republicada.geojson",
+        "bytes": 2024988,
+        "sha256": "b09eb5b30ecf4c491eaa613aa16d52d9776814bc94273f04b95c807902473a29"
+      }
+    ]
+  },
+  "san_miguel": {
+    "fecha_consulta": "2026-11-17",
+    "nombre": "San Miguel",
+    "codigo_divipola_centro_poblado": "25899025",
+    "resultado_catalogo_actual": "No figura San Miguel ni alias acreditado entre los 191 polígonos de barrios activos consultados.",
+    "clasificacion_fuente": "Centro poblado rural",
+    "atributos_originales": {
+      "FID": 8,
+      "CMunicipio": "25899",
+      "NMunicipio": "Zipaquirá",
+      "TSuelo": "Rural",
+      "Observacio": "Centro poblado rural denominado San Miguel",
+      "Shape_Leng": 2851.69525555,
+      "Shape__Area": 237461.4814453125,
+      "Shape__Length": 2851.695255550181
+    },
+    "publicador": "Infraestructura de Datos Espaciales Cundinamarca IDEC, organización ArcGIS lsxbLWF2l19Rmhqj, usuario ideradmin",
+    "fuente_declarada": "Información suministrada por el IGAC, según la descripción del elemento publicado.",
+    "titulo_fuente": "Clasificación y zonificación de usos del suelo POT. Municipio de Zipaquirá. (Base de datos)",
+    "url_capa": "https://services7.arcgis.com/lsxbLWF2l19Rmhqj/arcgis/rest/services/Clasificacion_zonificacion_usos_Zipaquira/FeatureServer/0",
+    "url_consulta": "https://services7.arcgis.com/lsxbLWF2l19Rmhqj/arcgis/rest/services/Clasificacion_zonificacion_usos_Zipaquira/FeatureServer/0/query?where=FID%3D8&outFields=%2A&returnGeometry=true&outSR=4326&f=geojson",
+    "url_elemento": "https://www.arcgis.com/home/item.html?id=f21eb6c15bbb49d786e02a8def792c8c",
+    "url_organizacion": "https://www.arcgis.com/sharing/rest/portals/lsxbLWF2l19Rmhqj?f=pjson",
+    "edicion_tematica": "No declarada expresamente; no inferir vigencia jurídica del POT ni edición temática 2026 a partir de una modificación del catálogo.",
+    "creacion_elemento_utc": "2022-07-31T14:09:25+00:00",
+    "modificacion_elemento_utc": "2026-08-19T21:24:41+00:00",
+    "edicion_datos_capa_utc": "2022-07-31T14:27:11.341000+00:00",
+    "vigencia_juridica_actual_verificada": false,
+    "licencia": {
+      "identificador": "CC BY 4.0",
+      "fuente": "licenseInfo del elemento; texto completo conservado en ider-elemento.json",
+      "atribucion": "Infraestructura de Datos Espaciales Cundinamarca IDEC; información suministrada por IGAC"
+    },
+    "archivo": "san-miguel.geojson",
+    "features": 1,
+    "campo_id": "FID",
+    "id_original": 8,
+    "campo_clasificacion": "TSuelo",
+    "campo_nombre_descriptivo": "Observacio",
+    "sistema_referencia_origen": "EPSG:9377",
+    "sistema_referencia_salida": "EPSG:4326 longitud,latitud; transformación solicitada a la API mediante outSR=4326",
+    "transformaciones_locales": "Ninguna: respuesta original preservada. La aplicación puede derivar NOMBRE=San Miguel y TIPO_ZONA=Centro poblado rural en una copia, documentando esa correspondencia.",
+    "validacion": {
+      "geometryType": "Polygon",
+      "rings": 1,
+      "vertices": 261,
+      "anillos_cerrados": true,
+      "bbox_lon_lat": [
+        -73.9635249031824,
+        5.03170380657975,
+        -73.954339130595,
+        5.03735547466264
+      ],
+      "topologia": "No ejecutada; validación estructural de coordenadas y anillos."
+    },
+    "relacion_vereda_corregimiento": "No acreditada por los atributos de este polígono. No asignar padre por suposición.",
+    "comuna": "No informada. No asignar a una comuna urbana por proximidad.",
+    "nota_igac": "El servicio carto1000sanmiguel25899025 de IGAC, año 2026, confirma la denominación centro poblado San Miguel; su cobertura cartográfica de 18,40 ha no define el límite del asentamiento. Las capas Nombre_Geografico_Unidad_Admin y Nombre_Geografico son puntos, no polígonos.",
+    "limites": "Cartografía POT referencial de la publicación consultada, no certificación jurídica actual ni localización de hechos delictivos.",
+    "consultas_no_utilizadas": [
+      {
+        "url": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer/305?f=pjson",
+        "resultado": "403 Forbidden Bots. No se eludió la restricción; no se usa geometría de DANE."
+      },
+      {
+        "url": "https://maps.cundinamarca.gov.co/agsprod/rest/services/IDER/IDER_Zipaquira/MapServer/21?f=pjson",
+        "resultado": "Host no resuelto; no se usa geometría de esaURL."
+      }
+    ],
+    "archivos": [
+      {
+        "archivo": "ider-clasificacion-atributos.json",
+        "bytes": 5839,
+        "sha256": "94305e984a8dc565e5f075271f288fd134df509465568548326ec2f15aa2a79f"
+      },
+      {
+        "archivo": "ider-clasificacion-suelo.json",
+        "bytes": 23152,
+        "sha256": "0eb3e42433f9d01fd78e24061485b8fca5c30c39a7901d5c4b9326d30eadda3c"
+      },
+      {
+        "archivo": "ider-elemento.json",
+        "bytes": 2916,
+        "sha256": "c58f8df1d4bb1472577c1bd0ec133ff20f1606251ecca0c9747aef6134f92252"
+      },
+      {
+        "archivo": "ider-organizacion.json",
+        "bytes": 17121,
+        "sha256": "79d91536e673d98322d6ed96daaea2dece10ca838a744b925ed381942713cf1f"
+      },
+      {
+        "archivo": "igac-nombre-geografico.json",
+        "bytes": 60983,
+        "sha256": "ab34c9cec4b9978b47572da48bdfb23d17bae5189bed9466870b7b1cd9af9c66"
+      },
+      {
+        "archivo": "igac-nombres.geojson",
+        "bytes": 72,
+        "sha256": "b7328cec6dd4d8a470d2d71623d77830ee4e4992ed2a0a9345a405c2202f7c67",
+        "estado": "Respuesta de error conservada, no usada como geometría",
+        "error": {
+          "code": 400,
+          "message": "Failed to execute query.",
+          "details": []
+        }
+      },
+      {
+        "archivo": "igac-servicio.json",
+        "bytes": 8970,
+        "sha256": "67f9b55cc713ccd566524bf665376d1662bc50f2f6eaaf20107b50e9b3cfc263"
+      },
+      {
+        "archivo": "igac-unidad-admin.json",
+        "bytes": 62965,
+        "sha256": "45bc39f31ce33e808353fa0d5321cb7ee38888b434518c0982a19b9d102566b6"
+      },
+      {
+        "archivo": "san-miguel.geojson",
+        "bytes": 10014,
+        "sha256": "1df2583259b22ca5b575970be453d690143cdef0da41ae173ea8db38fcdfca96"
+      }
+    ]
+  },
+  "transformaciones_en_aplicacion": "Geometrías originales sin edición. En prepare se añade NOMBRE=SAN MIGUEL, TIPO_ZONA=Centro poblado, AMBITO=Rural y SUELO=RURAL derivados de Observacio y TSuelo; se conserva fuente original. No se añade comuna ni vereda padre.",
+  "nota": "Referencias geográficas; no acreditan delimitación ni clasificación jurídica vigente. No sumar capas entre sí como si fueran hechos diferentes."
+}
