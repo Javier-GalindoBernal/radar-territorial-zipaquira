@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía para registrar y contrastar incidentes de seguridad reportados en Zipaquirá.">
+  <title>Guía de uso · Radar territorial para la Alcaldía de Zipaquirá</title>
+  <style>
+    :root{color-scheme:light;--ink:#302f2c;--muted:#6c6860;--teal:#006b3c;--line:#e7e1d8;--paper:#f8f6f2;--warm:#fff0e4}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--teal);text-underline-offset:4px}a:hover{color:#873808}a:focus-visible{outline:3px solid #bc872d;outline-offset:4px}header,main,footer{max-width:1060px;margin:auto;padding:24px 30px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line)}.brand{font-weight:750;letter-spacing:-.02em}.back{font-size:14px;font-weight:650}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:750;color:var(--teal);margin:24px 0 10px}h1{font-size:clamp(32px,5vw,54px);line-height:1.1;letter-spacing:-.045em;max-width:780px;margin:0 0 20px}h2{font-size:25px;line-height:1.3;letter-spacing:-.025em;margin:42px 0 12px}h3{font-size:18px;margin:24px 0 8px}.lead{max-width:760px;font-size:19px;color:var(--muted);margin:0 0 22px}.meta{font-size:13px;color:var(--muted)}.note{padding:18px 22px;background:var(--warm);border-left:4px solid #ab7b2c;margin:24px 0}.note p{margin:0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid var(--teal);border-radius:8px;text-decoration:none;font-weight:650;background:var(--teal);color:white}.button:hover{background:#873808;color:white}.button.secondary{background:transparent;color:var(--teal)}ol{padding-left:24px}li{margin-bottom:13px;padding-left:4px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:#f5e8d7}code{font:13px ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}p{margin:10px 0 14px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:32px}.catalog{border-top:1px solid var(--line);padding-top:12px}.catalog strong{display:block;margin-bottom:4px}.catalog p{font-size:14px;color:var(--muted)}footer{border-top:1px solid var(--line);font-size:13px;color:var(--muted);margin-top:36px;padding-bottom:36px}.plain-list{padding-left:20px}.plain-list li{margin-bottom:8px}section{scroll-margin-top:20px}@media(max-width:650px){header,main,footer{padding-left:20px;padding-right:20px}.columns{grid-template-columns:1fr;gap:0}header{align-items:flex-start}.lead{font-size:17px}th,td{padding:10px}.actions a{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="assets/alcaldia-zipaquira.jpeg" alt="Alcaldía de Zipaquirá" width="230" height="120" style="max-width:100%;height:auto;display:block"><span style="display:block;margin-top:8px">Radar territorial</span></div>
+    <a class="back" href="alcaldia.html">← Volver al tablero</a>
+  </header>
+  <main>
+    <p class="eyebrow">Zipaquirá Cree, Protege y Avanza 2024-2028</p>
+    <h1>Del reporte a un dato que puedas revisar.</h1>
+    <p class="lead">Registra hechos con fuente, fecha y ubicación sustentada. El tablero te ayuda a explorar su distribución y a identificar qué falta contrastar.</p>
+    <p class="meta">Diseño actualizado: 18 de noviembre de 2026 · Prototipo · Versión para la Alcaldía · Sin casos reales precargados</p>
+    <div class="note"><p><strong>La muestra tiene límites.</strong> Los resultados muestran incidentes identificados en las fuentes revisadas. Más publicaciones no equivalen a más delitos reales ni representan la opinión de toda una zona.</p></div>
+    <div class="actions">
+      <a class="button" href="plantilla-incidentes.csv" download>Descargar plantilla CSV</a>
+      <a class="button secondary" href="#campos">Consultar los campos</a>
+    </div>
+
+    <section>
+      <h2>Un primer recorrido de 50–100 publicaciones</h2>
+      <p>Empieza con <strong>hurtos a personas</strong> y una ventana de <strong>90 días</strong>. El tablero toma por defecto los últimos 90 días, hasta la fecha actual de Bogotá. Anota qué páginas revisaste, durante qué período y con qué criterio elegiste las publicaciones.</p>
+      <ol>
+        <li><strong>Consulta una fuente pública.</strong> Revisa manualmente la publicación original y conserva su enlace y fecha de consulta. Incluye fuentes con cobertura distinta; mirar solo lo más compartido sesga el resultado.</li>
+        <li><strong>Resume el incidente sin identificar personas.</strong> Omite nombres, documentos, teléfonos, perfiles, placas y direcciones de víctimas. Excluye acusaciones contra individuos identificables.</li>
+        <li><strong>Separa las fechas.</strong> La fecha del hecho puede ser distinta de la publicación. Si no conoces cuándo ocurrió, déjala vacía. Una publicación nueva puede narrar un caso antiguo.</li>
+        <li><strong>Ubica el lugar del hecho.</strong> Usa el barrio, comuna o vereda que la fuente mencione claramente y verifica su nombre territorial. Publicar en un grupo local no demuestra vivir allí ni que el hecho ocurriera allí.</li>
+        <li><strong>Relaciona las publicaciones del mismo caso.</strong> Cada publicación lleva un <code>registro_id</code> diferente. Las que describen el mismo hecho comparten <code>incidente_id</code>; así evitas contarlo varias veces.</li>
+        <li><strong>Contrasta antes de concluir.</strong> Revisa contradicciones de fecha, lugar o tipo de incidente. Dos publicaciones que repiten una noticia no son dos confirmaciones independientes.</li>
+        <li><strong>Explora y respalda.</strong> Revisa los filtros, los casos sin ubicación y sus fuentes. Exporta los datos de trabajo al terminar cada sesión.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Ubicar con la precisión que realmente tienes</h2>
+      <div class="columns">
+        <div>
+          <h3>Si conoces la zona</h3>
+          <p>Registra su nombre y si es barrio, comuna, vereda o sector. Si coincide con el catálogo, elige <strong>Solo zona</strong>: el conteo se representa sobre el polígono, sin crear coordenadas del incidente. No sitúes el hecho en el centro del barrio para fingir una ubicación puntual.</p>
+        </div>
+        <div>
+          <h3>Si el lugar es ambiguo</h3>
+          <p>Conserva el caso como <strong>Sin ubicar</strong>. Se cuenta por separado. La ausencia de puntos en una zona tampoco demuestra que allí no ocurran incidentes.</p>
+        </div>
+      </div>
+      <p>Los hechos clasificados como urbanos no se atribuyen a la capa rural porque una vereda histórica se superponga con la cabecera. Un nombre de barrio solo se relaciona con una vereda mediante relación acreditada o contención geométrica completa e inequívoca; un centro poblado requiere relación explícita. Las coordenadas opcionales deben corresponder al lugar sustentado del hecho. El mapa de referencia no verifica una ubicación ni acredita un límite oficial de barrio.</p>
+    </section>
+
+    <section>
+      <h2>Explora el territorio antes de cargar incidentes</h2><p><strong>San Miguel está incorporado.</strong> La fuente IDER Cundinamarca lo identifica como <strong>centro poblado rural</strong>. El botón “Ubicar San Miguel” abre su polígono y conserva esa clasificación. Su pertenencia a una comuna o vereda no fue informada por esa fuente y no se inventa. Puede aportar al conteo del centro poblado sin tener asignación veredal acreditada.</p><p>La capa de <strong>14 veredas de referencia</strong> declara edición municipal de julio de 2013 y es una republicación académica. El polígono de San Miguel procede de una publicación departamental con última edición de datos en 2022. Se conservan las diferencias de catálogo y la advertencia de vigencia no certificada. Consulta <a href="fuentes-rural.json">fuentes y validación rural</a>.</p>
+      <p>Si no tienes registros de trabajo, el tablero abre en <strong>Simulación</strong>, con 1.200 hechos sintéticos sobre barrios, veredas y centros poblados de referencia. Puedes elegir 600, 1.200 o 2.400 hechos y pulsar <strong>Nueva simulación</strong> para cambiar su distribución. Todos los casos, puntos y fuentes de esta demostración son inventados; los nombres de barrios y comunas provienen de la cartografía de referencia. No describen la seguridad real del municipio.</p><p>Alterna <strong>Comunas</strong>, <strong>Barrios y centros</strong> y <strong>Veredas</strong>. El inicio muestra las veredas y la extensión municipal, incluyendo el territorio rural. El filtro <strong>Ámbito territorial</strong> permite consultar urbano y expansión, rural o sin determinar; los tres conteos usan hechos únicos y no se suman capas superpuestas. El <strong>Mapa de calor</strong> colorea cada polígono de amarillo a naranja y rojo según su conteo de incidentes únicos. La escala se recalcula para la capa y filtros actuales; no expresa una tasa poblacional ni permite comparar colores de escenarios diferentes como si fueran una escala fija. El ranking y el resumen usan los mismos conteos que el mapa.</p><p>Haz clic en una zona del mapa o del ranking, o búscala por nombre. Usa acercar, alejar y arrastrar. <strong>Restablecer capa</strong> recupera el encuadre de la división seleccionada; <strong>Todo el territorio</strong> muestra el límite municipal completo. En <strong>Territorios</strong>, los colores solo distinguen zonas y no representan delitos. Selecciona <strong>Mis registros</strong> para trabajar con tus datos: la simulación no los modifica, no se guarda ni se exporta.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Capa</th><th>Qué contiene</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Comunas</strong></td><td>5 polígonos. La fuente municipal declarada indica actualización de 2014 y la descripción cita el Acuerdo Municipal 08 de 2014.</td></tr>
+          <tr><td><strong>Barrios</strong></td><td>191 polígonos y 190 nombres distintos de barrios, urbanizaciones y sectores. Edición declarada de abril de 2026; incluye expansión y suelo rural, además de algunos sectores no legalizados según el metadato. No significa que existan 191 barrios legalizados.</td></tr>
+        </tbody>
+      </table></div>
+      <p>Las capas activas son una <strong>republicación académica de la Universidad de Manizales con fuente municipal declarada</strong>. El original municipal y la vigencia jurídica actual no se han cotejado. La licencia no está declarada en el elemento consultado; las ediciones distintas tampoco certifican una correspondencia espacial completa. Utiliza esta cartografía como referencia, no como delimitación jurídica.</p>
+      <h3>Cómo se relacionan barrios y comunas</h3>
+      <ul class="plain-list">
+        <li>La agregación usa únicamente el atributo <code>COMUNA</code> con valores 1 a 5. Los <strong>25 polígonos con COMUNA=0</strong> conservan su condición sin comuna numerada; no forman una sexta comuna.</li>
+        <li><strong>ALTOS DE VILLA MARIA</strong> aparece en comunas 2 y 3. El buscador y las sugerencias añaden la comuna para distinguirlos. Selecciona el que la publicación permita sustentar.</li>
+        <li>Con <strong>Solo zona</strong>, el número sobre un polígono es un conteo agregado. La posición de la etiqueta no es la ubicación puntual de los incidentes.</li>
+        <li>Los colores y atributos temáticos de la capa de origen no son cifras de delitos ni se usan para contar incidentes.</li>
+      </ul>
+      <p><a href="fuentes-zonas.json" target="_blank" rel="noopener noreferrer">Consultar procedencia cartográfica, ediciones y comprobaciones</a>.</p>
+    </section>
+
+    <section>
+      <h2>Tres estados de revisión</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Estado</th><th>Cómo interpretarlo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pendiente</strong></td><td>La publicación está registrada y falta contrastar la información.</td></tr>
+          <tr><td><strong>Contrastado</strong></td><td>El revisor documentó un contraste de fuentes. Esto no equivale a prueba judicial; sigue siendo necesario explicar qué se pudo verificar.</td></tr>
+          <tr><td><strong>Registro oficial</strong></td><td>Procede de una fuente oficial. No significa que exista sentencia ni responsabilidad penal demostrada. Una publicación de Facebook no se convierte en registro oficial por copiar una cifra.</td></tr>
+        </tbody>
+      </table></div>
+      <p>Mantén distinguidas las publicaciones de Facebook, medios y registros oficiales. Pueden referirse al mismo incidente; sumarlas sin relacionarlas inflaría los resultados.</p>
+    </section>
+
+    <section id="campos">
+      <h2>Prepara tu matriz</h2>
+      <p>La plantilla contiene únicamente encabezados. Conserva sus nombres y utiliza las categorías de abajo. Escribe las fechas como <strong>AAAA-MM-DD</strong> y deja vacíos los datos que no conoces.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Campo</th><th>Qué contiene</th></tr></thead>
+        <tbody>
+          <tr><td><code>registro_id</code></td><td>Identificador único de la publicación o registro, por ejemplo R0001.</td></tr>
+          <tr><td><code>incidente_id</code></td><td>Identificador del hecho. Se repite si varias publicaciones narran el mismo caso.</td></tr>
+          <tr><td><code>fecha_hecho</code></td><td>Fecha del incidente; vacía si no se conoce.</td></tr>
+          <tr><td><code>fecha_publicacion</code></td><td>Fecha de la publicación, si se conoce.</td></tr>
+          <tr><td><code>fecha_consulta</code></td><td>Fecha real en la que revisaste la fuente.</td></tr>
+          <tr><td><code>delito</code></td><td>Tipo de incidente reportado. Su clasificación no es una calificación judicial.</td></tr>
+          <tr><td><code>zona</code> / <code>tipo_zona</code></td><td>Lugar del hecho y nivel territorial sustentados en la fuente y la revisión.</td></tr>
+          <tr><td><code>latitud</code> / <code>longitud</code></td><td>Par de coordenadas opcional del lugar del hecho. Usa punto decimal y no inventes precisión.</td></tr>
+          <tr><td><code>precision_ubicacion</code></td><td>Grado de precisión que puedes sustentar.</td></tr>
+          <tr><td><code>fuente</code> / <code>url_fuente</code></td><td>Procedencia y enlace público http:// o https://, sin usuario ni contraseña incrustados.</td></tr>
+          <tr><td><code>verificacion</code></td><td>Estado de revisión del registro.</td></tr>
+          <tr><td><code>resumen</code></td><td>Síntesis anónima y observaciones para interpretar la fuente.</td></tr>
+          <tr><td><code>responsable_revision</code></td><td>Rol o código de quien revisó, por ejemplo «Analista 1».</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Categorías exactas</h3>
+      <div class="columns">
+        <div class="catalog"><strong>Delito</strong><p>Hurto a personas · Hurto a vehículos · Hurto a comercio · Lesiones personales · Otro incidente</p></div>
+        <div class="catalog"><strong>Tipo de zona</strong><p>Barrio · Comuna · Vereda · Sector · Sin ubicar</p></div>
+        <div class="catalog"><strong>Precisión de ubicación</strong><p>Punto verificado · Aproximada · Solo zona · Sin ubicar</p></div>
+        <div class="catalog"><strong>Fuente</strong><p>Facebook · Oficial · Medio local · Reporte voluntario</p></div>
+        <div class="catalog"><strong>Verificación</strong><p>Pendiente · Contrastado · Registro oficial</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tus datos y el ejemplo de demostración</h2>
+      <p>Los registros de trabajo se guardan <strong>en este navegador</strong>. No se sincronizan entre equipos ni tienen respaldo automático. Borrar los datos del navegador puede eliminarlos: conserva una exportación al finalizar cada sesión.</p>
+      <p>La demostración usa ejemplos ficticios y permanece separada del trabajo real. Sus lugares y cantidades no describen la seguridad de Zipaquirá. No la mezcles con registros reales ni la uses como evidencia.</p>
+      <p>Esta primera versión recibe entradas manuales y CSV. <strong>No tiene conexión con Facebook ni Croma</strong>, no recoge publicaciones automáticamente y no realiza clasificación automática con IA.</p>
+    </section>
+
+    <section>
+      <h2>Cómo leer los resultados</h2>
+      <ul class="plain-list">
+        <li>Habla de <strong>incidentes reportados en la muestra</strong>, con su período y cobertura.</li>
+        <li>Los agregados por zona no permiten inferir el riesgo de una persona ni atribuirle conductas.</li>
+        <li>Compara períodos de duración y cobertura equivalentes. Cambiar de fuentes puede cambiar las cifras.</li>
+        <li>Los datos oficiales sin detalle de barrio o coordenadas aportan contexto municipal; no permiten construir una distribución dentro del municipio.</li>
+        <li>Contrasta los hallazgos con información institucional y validación territorial antes de concluir.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Referencias y procedencia</h2>
+      <p><a href="https://www.policia.gov.co/tipos-descargables/estadistica-delictiva" target="_blank" rel="noopener noreferrer">Policía Nacional · Estadística delictiva</a>: consulta los metadatos y el detalle territorial disponible antes de incorporar un archivo.</p>
+      <p><a href="https://about.fb.com/news/2021/04/how-we-combat-scraping/" target="_blank" rel="noopener noreferrer">Meta · Recopilación automatizada</a>: Meta explica que la captura automatizada requiere su autorización. Este piloto usa revisión manual y archivos aportados por el usuario.</p>
+      <p class="meta">Responsable del dato: el revisor documentado en cada registro. La designación del responsable del piloto real está pendiente.</p>
+    </section>
+    <div class="actions"><a class="button" href="alcaldia.html">Volver al tablero</a><a class="button secondary" href="plantilla-incidentes.csv" download>Descargar plantilla vacía</a></div>
+  </main>
+  <footer>Radar territorial · Zipaquirá / Piloto de diagnóstico de reportes públicos. No es un registro oficial de delitos ni un sistema de predicción.
+    <p style="color:var(--teal);font-size:13px">Realizado por <strong>GLOBAL ANALITIK SAS</strong> y <strong>QUANTIKA IA SAS</strong> — Javier Galindo</p>
+  </footer>
+</body>
+</html>

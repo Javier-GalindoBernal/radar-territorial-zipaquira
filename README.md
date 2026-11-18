@@ -100,3 +100,7 @@ La simulación incorpora hechos sintéticos de veredas y centros poblados, inclu
 El archivo del usuario llamado zipaquira_barrios_comunas_veredas contiene 191 polígonos, todos etiquetados como barrios: coincide exactamente con la capa barrial existente al quitar el atributo auxiliar _capa. No aporta polígonos de comunas, veredas ni San Miguel.
 
 El texto de OpenStreetMap contiene un único límite municipal. Se conservó una copia reparada únicamente con la llave inicial faltante en Inputs del proyecto; no se usa como sustituto de las divisiones internas ni se reemplaza el límite IGAC existente sin cotejo. La aplicación combina capas diferenciadas y documenta la procedencia rural en fuentes-rural.json.
+
+## Versión para la Alcaldía — 18 nov 2026
+
+[Versión Alcaldía](https://radar-territorial-zipaquira.globalanalitiksas.chatgpt.site/alcaldia.html), con la imagen adjunta y el lema “Zipaquirá Cree, Protege y Avanza 2024-2028”. Preserva las funciones y la cartografía, con guía propia y aviso de prototipo/datos sintéticos. Comparte almacenamiento de navegador con la ruta principal. Detalles: docs/version-alcaldia.md.
