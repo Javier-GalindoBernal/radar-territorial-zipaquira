@@ -1,8 +1,8 @@
 /** Escenarios enteramente sintéticos sobre cartografía de referencia real.
  * No representa hechos ocurridos, no consulta fuentes ni modifica almacenamiento.
  */
-import { ENUMS, SCOPE_BOUNDS } from './data.mjs?v=20261118-rural1';
-import { contains, extent, norm } from './territory.mjs?v=20261118-rural1';
+import { ENUMS, SCOPE_BOUNDS } from './data.mjs?v=20261118-palette1';
+import { contains, extent, norm } from './territory.mjs?v=20261118-palette1';
 
 function randomGenerator(seed) {
   let state = 2166136261;

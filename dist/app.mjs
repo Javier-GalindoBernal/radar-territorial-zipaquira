@@ -1,6 +1,6 @@
-import { TerritoryMap, prepare, model as territoryModel, classifyScope } from './territory.mjs?v=20261118-rural1';
-import { COLUMNS, ENUMS, parseCSV, toCSV, validateRecords, groupIncidents, filterRecords } from './data.mjs?v=20261118-rural1';
-import { generateDemoRecords } from './demo.mjs?v=20261118-rural1';
+import { TerritoryMap, prepare, model as territoryModel, classifyScope } from './territory.mjs?v=20261118-palette1';
+import { COLUMNS, ENUMS, parseCSV, toCSV, validateRecords, groupIncidents, filterRecords } from './data.mjs?v=20261118-palette1';
+import { generateDemoRecords } from './demo.mjs?v=20261118-palette1';
 
 const $ = id => document.getElementById(id);
 const STORAGE_KEY = 'radar-zipaquira-trabajo-v1';
@@ -221,7 +221,7 @@ if (window.matchMedia('(min-width:1000px)').matches) $('filters-disclosure').ope
 refreshZones(); render(); if (savedProblem) say(savedProblem, true);
 try {
   const urls = ['limite-zipaquira.geojson', 'cartografia.json', 'comunas.geojson', 'barrios.geojson', 'fuentes-zonas.json', 'veredas.geojson', 'san-miguel.geojson'];
-  const responses = await Promise.all(urls.map(url => fetch(url+'?v=20261118-rural1')));
+  const responses = await Promise.all(urls.map(url => fetch(url+'?v=20261118-palette1')));
   const data = await Promise.all(responses.map(r => r.ok ? r.json() : null));
   if (data[0]?.features?.length) geometry = data[0]; geoMeta = data[1];
   areas.comunas = prepare(data[2], 'comunas');

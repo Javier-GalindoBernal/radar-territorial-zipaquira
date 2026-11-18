@@ -165,8 +165,8 @@ export function model(groups, areas, layer, municipal) {
 }
 function svg(tag, attrs = {}, text) { const node = document.createElementNS(NS, tag); for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value); if (text != null) node.textContent = text; return node; }
 export function heatColor(count, max) {
-  if (!count || !max) return '#f2f0e9';
-  const palette = ['#fff0b3','#ffda75','#ffb747','#f8892d','#e85d25','#cb351e','#982419'];
+  if (!count || !max) return 'var(--map-empty, #f2f0e9)';
+  const palette = ['var(--map-heat-0, #fff0b3)','var(--map-heat-1, #ffda75)','var(--map-heat-2, #ffb747)','var(--map-heat-3, #f8892d)','var(--map-heat-4, #e85d25)','var(--map-heat-5, #cb351e)','var(--map-heat-6, #982419)'];
   return palette[Math.min(palette.length-1, Math.floor(count/max*(palette.length-1)))];
 }
 export class TerritoryMap {
@@ -215,19 +215,19 @@ export class TerritoryMap {
     this.k=Math.cos(cy*Math.PI/180);this.scale=Math.min(750/(width*this.k),422/height);
     const project=(x,y)=>[410+(x-cx)*this.k*this.scale,250-(y-cy)*this.scale];
     node.replaceChildren(svg('title',{id:'map-title'},'Zipaquirá por '+this.layer),svg('desc',{id:'map-desc'},zones.length+' zonas de referencia. '+(this.style==='heat'?'El mapa de calor representa el conteo de incidentes por zona, no una tasa de riesgo. ':'Los colores distinguen territorios. ')+(this.demo?'Incidentes enteramente sintéticos; no describen delitos reales.':'Sin registros no se puede concluir ausencia de delitos.')));
-    const grid=svg('g',{stroke:'#e7e3db','stroke-width':'.6','pointer-events':'none'});
+    const grid=svg('g',{stroke:'var(--map-grid, #e7e3db)','stroke-width':'.6','pointer-events':'none'});
     for(let x=0;x<=820;x+=50)grid.append(svg('line',{x1:x,x2:x,y1:0,y2:500}));
     for(let y=0;y<=500;y+=50)grid.append(svg('line',{x1:0,x2:820,y1:y,y2:y}));
     node.append(grid);
     const pathFor=f=>rings(f).map(p=>p.map(r=>r.map(([x,y],i)=>(i?'L':'M')+project(x,y).map(n=>n.toFixed(2)).join(',')).join(' ')+'Z').join(' ')).join(' ');
-    for(const f of this.municipal?.features||[])node.append(svg('path',{d:pathFor(f),fill:'#e9e7df',stroke:'#b9b5aa','stroke-width':'1.2','fill-rule':'evenodd','pointer-events':'none'}));
+    for(const f of this.municipal?.features||[])node.append(svg('path',{d:pathFor(f),fill:'var(--map-ground, #e9e7df)',stroke:'var(--map-border, #b9b5aa)','stroke-width':'1.2','fill-rule':'evenodd','pointer-events':'none'}));
     const max=Math.max(0,...[...data.counts.values()].map(r=>r.length));
-    const neutral=['#e6d6bd','#edddcb','#d7dfd5','#eadbc2','#d8d7ce'];
+    const neutral=['var(--map-neutral-0, #e6d6bd)','var(--map-neutral-1, #edddcb)','var(--map-neutral-2, #d7dfd5)','var(--map-neutral-3, #eadbc2)','var(--map-neutral-4, #d8d7ce)'];
     const ordered=[...zones].sort((a,b)=>(this.selected===a.id?1:0)-(this.selected===b.id?1:0)||(data.counts.get(a.id)?.length||0)-(data.counts.get(b.id)?.length||0));
     for(let i=0;i<ordered.length;i++){
       const f=ordered[i],count=data.counts.get(f.id)?.length||0,active=this.selected===f.id;
       const fill=this.style==='heat'?heatColor(count,max):neutral[i%neutral.length];
-      const path=svg('path',{d:pathFor(f),fill,stroke:active?'#45281a':'#a7927d','stroke-width':active?'3.2':'.9','fill-rule':'evenodd',class:'territory-zone',role:'button',tabindex:'0','data-zone':f.id,'data-count':count,'aria-label':(f.displayLabel||f.label)+': '+count+' incidentes'+(this.demo?' sintéticos':''),'aria-pressed':String(active)});
+      const path=svg('path',{d:pathFor(f),fill,stroke:active?'var(--map-selected, #45281a)':'var(--map-border, #a7927d)','stroke-width':active?'3.2':'.9','fill-rule':'evenodd',class:'territory-zone',role:'button',tabindex:'0','data-zone':f.id,'data-count':count,'aria-label':(f.displayLabel||f.label)+': '+count+' incidentes'+(this.demo?' sintéticos':''),'aria-pressed':String(active)});
       path.append(svg('title',{},(f.displayLabel||f.label)+' · '+count+' incidentes'+(this.demo?' sintéticos':'')));
       path.addEventListener('click',()=>{if(!this.didPan)this.select(f.id);});
       path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();this.select(f.id);}});
@@ -245,12 +245,12 @@ export class TerritoryMap {
       const box=[x-Math.min(180,label.length*labelSize*.29),y-labelSize*.7,x+Math.min(180,label.length*labelSize*.29),y+labelSize*(count?1.8:.7)];
       const overlap=occupied.some(o=>box[0]<o[2]&&box[2]>o[0]&&box[1]<o[3]&&box[3]>o[1]);
       if(overlap&&!selected)continue;occupied.push(box);
-      labels.append(svg('text',{x,y,'text-anchor':'middle',fill:'#3e2b1d','font-size':labelSize,'font-weight':selected||this.layer!=='barrios'?750:600,stroke:'#fffdf3','stroke-width':4,'paint-order':'stroke','stroke-linejoin':'round'},label));
-      if(count&&(this.style==='heat'||selected))labels.append(svg('text',{x,y:y+labelSize*1.25,'text-anchor':'middle',fill:'#5d2d10','font-size':labelSize*.9,'font-weight':750,stroke:'#fffdf3','stroke-width':3,'paint-order':'stroke'},count.toLocaleString('es-CO')));
+      labels.append(svg('text',{x,y,'text-anchor':'middle',fill:'var(--map-label, #3e2b1d)','font-size':labelSize,'font-weight':selected||this.layer!=='barrios'?750:600,stroke:'var(--map-halo, #fffdf3)','stroke-width':4,'paint-order':'stroke','stroke-linejoin':'round'},label));
+      if(count&&(this.style==='heat'||selected))labels.append(svg('text',{x,y:y+labelSize*1.25,'text-anchor':'middle',fill:'var(--map-count, #5d2d10)','font-size':labelSize*.9,'font-weight':750,stroke:'var(--map-halo, #fffdf3)','stroke-width':3,'paint-order':'stroke'},count.toLocaleString('es-CO')));
     }
-    node.append(labels,svg('text',{x:787,y:27,fill:'#725742','font-size':15,'text-anchor':'middle','font-weight':750},'N'),svg('path',{d:'M787,62 L787,36 M781,45 L787,36 L793,45',fill:'none',stroke:'#725742','stroke-width':2}));
+    node.append(labels,svg('text',{x:787,y:27,fill:'var(--map-guide, #725742)','font-size':15,'text-anchor':'middle','font-weight':750},'N'),svg('path',{d:'M787,62 L787,36 M781,45 L787,36 L793,45',fill:'none',stroke:'var(--map-guide, #725742)','stroke-width':2}));
     const meters=this.zoomLevel>4?200:1000,pixels=meters/111320*this.scale;
-    node.append(svg('path',{d:'M25,458 L25,465 L'+(25+pixels)+',465 L'+(25+pixels)+',458',fill:'none',stroke:'#725742','stroke-width':2}),svg('text',{x:25,y:487,fill:'#725742','font-size':13},'≈ '+(meters===1000?'1 km':meters+' m')));
+    node.append(svg('path',{d:'M25,458 L25,465 L'+(25+pixels)+',465 L'+(25+pixels)+',458',fill:'none',stroke:'var(--map-guide, #725742)','stroke-width':2}),svg('text',{x:25,y:487,fill:'var(--map-guide, #725742)','font-size':13},'≈ '+(meters===1000?'1 km':meters+' m')));
     const selected=zones.find(f=>f.id===this.selected);this.detail.replaceChildren();
     const title=document.createElement('strong'),line=document.createElement('span');
     title.textContent=selected?(selected.displayLabel||selected.label):zones.length+' '+(this.layer==='barrios'?'barrios, sectores y centros poblados':this.layer==='veredas'?'veredas':'comunas')+' de referencia';

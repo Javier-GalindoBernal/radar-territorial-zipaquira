@@ -104,3 +104,7 @@ El texto de OpenStreetMap contiene un único límite municipal. Se conservó una
 ## Versión para la Alcaldía — 18 nov 2026
 
 [Versión Alcaldía](https://radar-territorial-zipaquira.globalanalitiksas.chatgpt.site/alcaldia.html), con la imagen adjunta y el lema “Zipaquirá Cree, Protege y Avanza 2024-2028”. Preserva las funciones y la cartografía, con guía propia y aviso de prototipo/datos sintéticos. Comparte almacenamiento de navegador con la ruta principal. Detalles: docs/version-alcaldia.md.
+
+## Paleta institucional completa — 18 nov 2026
+
+La ruta /alcaldia aplica la paleta de referencia del portal oficial a controles, superficies, tabla, diálogos, guía y mapa. Verde observado #488704, verde claro #A8C98D, blanco, texto oscuro y rojo como acento. Los tonos derivados se ajustan para legibilidad; no se atribuyen como especificaciones normativas de un manual. Mapa y leyenda comparten una escala secuencial blanca/roja para conteos. Detalle: docs/paleta-institucional.md.
